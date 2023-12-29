@@ -1,0 +1,242 @@
+*{
+    font-family: system-ui;
+    font-size: 100%;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: oldlace;
+}
+select {
+    height: 36px;
+    width: 101px;
+    text-indent: 20px;
+}
+input {
+    height: 32px;
+    width: 100%;
+    text-indent: 5px;
+}
+#add {
+    width: 92px;
+    float: left;
+    line-height: 32px;
+    margin-left: 0.4%;
+    margin-top: 20px;
+    height: 32px;
+}
+#save {
+    width: 92px;
+    float: left;
+    line-height: 32px;
+    margin-left: 22px;
+    margin-top: 20px;
+    height: 32px;
+}
+#reset {
+    width: 92px;
+    float: left;
+    line-height: 32px;
+    margin-left: 8px;
+    margin-top: 20px;
+    height: 32px;
+}
+.question {
+    position: relative;
+    float: left;
+}
+#amountTasks {
+    position: relative;
+    float: left;
+    width: 32px;
+    height: 32px;
+    top: 20px;
+    left: 22px;
+    text-align: center;
+    line-height: 32px;
+    color: white;
+}
+.quit {
+    position: relative;
+    float: left;
+    width: 101px;
+    height: 32px;
+    left: 22px;
+}
+#contentStatus {
+    height: 32px;
+    float: left;
+    text-align: center;
+    line-height: 32px;
+    margin-left: 4px;
+    margin-top: 18px;
+    padding-left: 10px;
+    color: white;
+}
+#header {
+    position: fixed;
+    padding-left: 2%;
+    width: 100%;
+    height: 73px;
+    z-index: 1;
+    box-shadow: 0px 2px 2px;
+    background-color: steelblue;
+}
+#addNewLine {
+    position: fixed;
+    padding-left: 2%;
+    display: none;
+    top: 73px;
+    height: 73px;
+    width: 100%;
+    box-shadow: 0px 2px 2px;
+    background-color: deepskyblue;
+    z-index: 1;
+}
+#addNewLine:hover {
+    background-color: steelblue;
+}
+#addNewLine .timeContainer, #addNewLine #timeframeSelect, #addNewLine .taskContainer, #addNewLine .statusContainer, #addNewLine .deleteLineContainer{
+    margin-top: 18px;
+}
+#addNewTime {
+    position: relative;
+    float: left;
+    width: 98px;
+    height: 32px;
+    line-height: 32px;
+}
+#timeframeSelect {
+    position: relative;
+    float: left;
+    width: 101px;
+    margin-left: 26px;
+}
+#taskDescription {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+#mainContent {
+    position: relative;
+    top: 154px;
+    width: 100%;
+}
+.spacer {
+    float: left;
+    height: 200px;
+    width: 83%;
+}
+.lineContainer {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 2%;
+    height: 36px;
+    margin-bottom: 6px;
+}
+.lineContainer:hover {
+    height: 36px;
+    background-color: #dacda3;
+}
+.hide {
+    display: none;
+}
+.deleteLineContainer {
+    position: relative;
+    left: 48px;
+    top: 2px;
+    float: left;
+    width: 24px;
+    height: 32px;
+    color: red;
+    cursor: pointer;
+    line-height: 32px;
+    font-size: 22px;
+}
+.column {
+    position: relative;
+    float: left;
+    word-wrap: break-word;
+}
+.statusContainer {
+    width: 20px;
+    margin-top: 0px;
+    margin-left: 22px;
+    line-height: 32px;
+    height: 32px;
+}
+.hasDatepicker {
+    width: 100%;
+}
+.past {
+    color: gray;
+}
+.future {
+    color: red;
+}
+.timeSpanContainer {
+    margin-left: 26px;
+    width: 101px;
+}
+.timeContainer {
+    width: 98px;
+    margin-left:0.4%;
+}
+.taskContainer {
+    margin-left: 22px;
+    width: 55%;
+}
+.taskField {
+    width: 100%;
+}
+.myInputField {
+    margin-left: 10px;
+}
+
+
+
+/* The coolest button in mankinds history ***********************************************/
+/** online-tool for generating gradients: https://www.colorzilla.com/gradient-editor/ **/
+.mySwitch {
+    font-weight: bold;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 0px #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    margin-bottom: 2px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-top-color: #aeafae;
+    border-bottom-color: #7c7e7c;
+    -webkit-box-shadow: inset 0px 1px 0px #fbfbfb, inset 1px 0px 0px #ededed, inset 0px -1px 0px #dfdfdf, inset -1px 0px 0px #ededed, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0px 1px 0px #fbfbfb, inset 1px 0px 0px #ededed, inset 0px -1px 0px #dfdfdf, inset -1px 0px 0px #ededed, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 1px 0px #fbfbfb, inset 1px 0px 0px #ededed, inset 0px -1px 0px #dfdfdf, inset -1px 0px 0px #ededed, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#bdbdbd');
+    background-image: -moz-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: -ms-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#f8f8f8), to(#bdbdbd));
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: -o-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: linear-gradient(top, #f8f8f8, #bdbdbd);
+}
+.mySwitch:hover {
+    -webkit-box-shadow: inset 0px 1px 0px #fcfcfc, inset 1px 0px 0px #f0f0f0, inset 0px -1px 0px #e4e4e4, inset -1px 0px 0px #f0f0f0, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0px 1px 0px #fcfcfc, inset 1px 0px 0px #f0f0f0, inset 0px -1px 0px #e4e4e4, inset -1px 0px 0px #f0f0f0, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 1px 0px #fcfcfc, inset 1px 0px 0px #f0f0f0, inset 0px -1px 0px #e4e4e4, inset -1px 0px 0px #f0f0f0, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#c9c9c9');
+    background-image: -moz-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: -ms-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#f8f8f8), to(#c9c9c9));
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: -o-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: linear-gradient(top, #f8f8f8, #c9c9c9);
+}

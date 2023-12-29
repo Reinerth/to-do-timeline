@@ -1,0 +1,46 @@
+
+
+-----------------------------------------------------------------------
+command line: C:\xampp\htdocs\ar\to-do-timeline>tree /f /A >tree.txt
+-----------------------------------------------------------------------
+
+
+o root
+|   to-do-timeline.htm
+|   
++---doc
+|       tree.txt
+|	to-do-timeline-add-task-view.png
+|	to-do-timeline-main-view.png
+|	to-do-timeline-the-complete-php-part.png
+|       
+\---mvc
+    +---controller
+    |   |   controller.js
+    |   |   write-to-timeline.php
+    |   |   
+    |   \---external
+    |           AUTHORS.txt
+    |           jquery-ui.js
+    |           jquery.js
+    |           LICENSE.txt
+    |           package.json
+    |           
+    +---model
+    |       to-do-timeline-content.txt
+    |       to-do-timeline.js
+    |       
+    \---view
+        +---css
+        |   |   style.css
+        |   |   
+        |   \---external
+        |           jquery-ui.css
+        |           
+        \---img
+            |   to-do-timeline.png
+            |   
+            \---external
+                    ui-icons_444444_256x240.png
+                    ui-icons_555555_256x240.png
+                    

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-timeline | single user</title>
+
+    <link rel="icon" type="image/x-icon" href="./mvc/view/img/to-do-timeline.png?since=202312291220&svnrevision=001">
+    <link rel="stylesheet" href="./mvc/view/css/style.css?since=202312291220&svnrevision=001">
+    <link rel="stylesheet" href="./mvc/view/css/external/jquery-ui.css">
+</head>
+
+<body>
+    <!-- 
+
+        Regarding the used applications file- and code-structure,
+        (my favourite of all times), you can find details 
+        and a template of it on github:
+        https://github.com/Reinerth/Application-Template-MVC-best-Practice
+
+        Regarding the application:
+        A to-do-list based on JavaScript, php and a txt-file.
+        There is no database integrated. (means, without SQL).
+        Yet, tested only with edge-browser.
+
+        Ment to be a little helper-tool, 
+        mainly for a developer, because a web-server and php are needed 
+        and the application is not safe enough for a public server.
+        See limitations below. 
+
+        Known limitations:
+        I. SINGLE-USER-application (Details see below) 
+        II. Not working with IIS-server (Details see below)
+        III. No XSS-catches (Details see below) 
+
+        Details I:
+        No database behind, is the reason 
+        why it can only be used by one single user.
+        If two different users, would make a change on the timeline-file,
+        they would overwrite each others changes.
+
+        Details II:
+        Not the best technical approach, but
+        for getting and setting the content to the file,
+        The POST-Method was used, because GET has limited allowed size. 
+        This is the reason why it is not working on IIS. 
+        Microsofts Server IIS (Internet Information Services) 
+        does not accept requesting a file via POST. 
+        HTTPD-server from Apache (e.g. XAMPP) accepts POST to request a file.
+
+        Details III:
+        It would be quite easy to break the tool if trying.
+        There are no integrated security-issues: 
+        - no checks of XSS-injections
+        - no validity-checks on input-fields
+        - no lock- or error-catches on the amount of tasks
+        (I tried 1000 and all went fine - surely not ment to be for more)
+    -->
+
+    <!-- The DOM-elements (plus CSS and IMG) represent the VIEW -->
+    <div id="header">
+        <div id="add" class="mySwitch">Add</div>
+        <div id="save" class="mySwitch">Save</div>
+        <div id="contentStatus"></div>
+        <div id="reset" class="mySwitch">Reset all</div>
+        <div id="amountTasks"></div>
+    </div>
+
+    <div id="addNewLine">
+        <div class="column timeContainer">
+            <input type="text" id="addNewTime">
+        </div>
+        <div id="timeframeSelect"></div>
+        <div class="column taskContainer">
+            <input type="text" id="taskDescription" placeholder="What a difference a day makes ...">
+        </div>
+        <div class="column statusContainer"></div>
+        <div id="quitNewTask"></div>
+    </div>
+
+    <div id="mainContent"></div>
+
+
+    <!-- The Center for Configuration and Model must be included first. -->
+    <script src="./mvc/model/to-do-timeline.js?since=202312291220&svnrevision=001"></script>
+
+    <!-- The external libraries used for the datepicker -->
+    <script src="./mvc/controller/external/jquery.js"></script>
+    <script src="./mvc/controller/external/jquery-ui.js"></script>
+
+
+    <!-- The Classes / Modules. The order of inclusion doesnt matter. -->
+    <script src="./mvc/controller/controller.js?since=202312291220&svnrevision=001"></script>
+
+    <script>
+
+        /**
+         * CONFIGURE the application (the settings are in to-do-timeline.js)
+         * (not needed here)
+        */
+        window.timeline.someConfig = "ABC";
+        window.timeline.language = "Esperanto";
+
+        /**
+         * SETTINGS are always accessible (the settings are in to-do-timeline.js)
+         * (not needed here)
+        */
+        console.log(window.timeline.version);
+
+        /**
+         * INVOKE public functions from the classes of the application.
+        */
+        timeline.init();
+
+        /**
+         * In the WINDOW-object we can see our application ("timeline").
+        */
+        console.log(window.timeline);
+    </script>
+</body>
+
+</html>
