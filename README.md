@@ -40,7 +40,7 @@ HTTPD-server from Apache (e.g. XAMPP) accepts POST to request a file.<br><br>
 
 ### Details III:<br>
 It would be quite easy to break the tool if trying.<br>
-There are no integrated security-issues: <br>
+There are no integrated security-features: <br>
 - no checks of XSS-injections<br>
 - no validity-checks on input-fields<br>
 - no lock- or error-catches on the amount of tasks<br>
